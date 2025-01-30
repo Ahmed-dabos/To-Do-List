@@ -33,7 +33,7 @@ function addToLocalStorage(e) {
     input.value = "";
   }
 }
-
+tasksShowing.addEventListener("click", removeFromLocalStorage)
 function removeFromLocalStorage() {
   tasks = JSON.parse(window.localStorage.tasks);
   document.addEventListener("click", function (e) {
@@ -44,4 +44,5 @@ function removeFromLocalStorage() {
     e.target.classList.contains("task") ? e.target.remove() : e.target;
   });
 }
-removeFromLocalStorage();
+
+
