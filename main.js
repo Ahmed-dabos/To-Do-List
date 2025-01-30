@@ -3,8 +3,6 @@ let submit = document.getElementsByClassName("add")[0];
 let tasksShowing = document.getElementsByClassName("tasks")[0];
 let tasks = [];
 
-window.onload = removeFromLocalStorage;
-
 if (window.localStorage.tasks) {
   tasks = JSON.parse(window.localStorage.tasks);
   for (let i = 0; i < tasks.length; i++) {
@@ -46,3 +44,4 @@ function removeFromLocalStorage() {
     e.target.classList.contains("task") ? e.target.remove() : e.target;
   });
 }
+removeFromLocalStorage();
